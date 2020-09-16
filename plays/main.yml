@@ -1,0 +1,12 @@
+#! /usr/bin/env ansible-playbook
+# Configure helm kubernetes release manager
+# Replace 'k8s' with your own inventory group
+---
+- name: helm | kubernetes release manager
+  hosts: k8s
+  roles:
+  - role: helm
+    tags:
+    - helm
+    - k8s
+    - kubernetes

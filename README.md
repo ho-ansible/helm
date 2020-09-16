@@ -1,22 +1,13 @@
-# Ansible role: template
-Brief description of role.
+# Ansible role: helm
+[Helm](https://helm.sh) manages software releases installed on a kubernetes cluster.
 
 ## Requirements
 Only tested on Debian stable, for now.
 
 ## Role Variables
-+ `variable`: description
 
 ## Dependencies
 None.
-
-## Example Playbook
-
-```
-- hosts: all
-  roles:
-    - { role: ho-ansible.template }
-```
 
 ## License
 MIT

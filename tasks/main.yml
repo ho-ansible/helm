@@ -1,1 +1,22 @@
 ---
+
+- name: helm | repo key
+  tags:
+  - apt
+  apt_key:
+    url: "{{ helm_apt_key }}"
+
+- name: helm | apt repository
+  tags:
+  - apt
+  apt_repository:
+    repo: "{{ helm_apt_repo }}"
+    filename: helm
+
+- name: helm | packages
+  tags:
+  - package
+  package:
+    name: 
+    - apt-transport-https
+    - helm

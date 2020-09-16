@@ -1,1 +1,4 @@
 ---
+helm_mirror: "https://baltocdn.com/helm"
+helm_apt_key: "{{ helm_mirror }}/signing.asc"
+helm_apt_repo: "deb {{ helm_mirror }}/stable/debian/ all main"
