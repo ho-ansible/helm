@@ -23,5 +23,5 @@
 
 - name: helm | bash completion
   shell:
-    cmd: /usr/bin/helm completion bash > /etc/bash_completion.d/helm
-    creates: /etc/bash_completion.d/helm
+    cmd: /usr/bin/helm completion bash > {{ helm_bash_completion }}
+    creates: "{{ helm_bash_completion }}"

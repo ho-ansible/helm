@@ -1,0 +1,28 @@
+---
+- name: helm | uninstall package
+  tags:
+  - package
+  package:
+    name: helm
+    state: absent
+
+- name: helm | remove repo
+  tags:
+  - apt
+  apt_repository:
+    repo: "{{ helm_apt_repo }}"
+    state: absent
+
+- name: helm | remove repo key
+  tags:
+  - apt
+  apt_key:
+    url: "{{ helm_apt_key }}"
+    state: absent
+
+- name: helm | remove files
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+  - "{{ helm_bash_completion }}"

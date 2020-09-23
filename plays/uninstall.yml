@@ -1,0 +1,14 @@
+#! /usr/bin/env ansible-playbook
+# Uninstall helm kubernetes release manager
+# Replace 'k8s_servers' with your own inventory group
+---
+- name: helm | uninstall
+  hosts: k8s_servers
+  tasks:
+  - include_role:
+      name: helm
+      tasks_from: uninstall.yml
+    tags:
+    - helm
+    - k8s
+    - kubernetes
