@@ -20,3 +20,8 @@
     name: 
     - apt-transport-https
     - helm
+
+- name: helm | bash completion
+  shell:
+    cmd: /usr/bin/helm completion bash > /etc/bash_completion.d/helm
+    creates: /etc/bash_completion.d/helm
