@@ -5,6 +5,7 @@
   - apt
   apt_key:
     url: "{{ helm_apt_key }}"
+    dest: "{{ helm_apt_keyring }}"
 
 - name: helm | apt repository
   tags:
